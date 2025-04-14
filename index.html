@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laat je bedrijf groeien met AI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    body {
+      background-color: #000000;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+  
+    .lux-bg {
+      background-color: #000000;
+      color: #ffffff;
+    }
+    .gold-text {
+      color: #d4af37;
+    }
+    .btn-gold {
+      background-color: #d4af37;
+      color: #000;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: #b89d2f;
+      transform: scale(1.05);
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.75rem;
+      font-weight: 600;
+    }
+    .testimonial {
+      background: #111111;
+      border-left: 5px solid #d4af37;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      color: #ffffff;
+      border-radius: 8px;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      height: 100vh;
+      text-align: center;
+    }
+    .icon-box {
+      display: flex;
+      flex-direction: column; /* Stacks content vertically inside the box */
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 3rem; /* Padding inside the box */
+      border-radius: 1rem; /* Slightly larger border radius */
+      background: #333; /* Dark background */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      transition: transform 0.3s ease; /* Smooth hover effect */
+      color: #fff; /* White text color */
+      text-align: center; /* Centers text */
+      border: 2px solid #d4af37; /* Gold border */
+      width: 400px; /* Increased width for a larger box */
+      height: auto; /* Adjust height to fit content */
+      margin: 1.5rem; /* Adds margin around each box */
+    }
+
+    .icon-box img {
+      margin-bottom: 1.5rem; /* Adds spacing below the image */
+    }
+
+    .icon-box:hover {
+      transform: translateY(-5px); /* Moves the box slightly upward on hover */
+    }
+
+    .icon-box h5 {
+      color: #fff; /* White heading color */
+      margin-top: 1rem;
+      font-weight: 600;
+      font-size: 1.5rem; /* Adjusted font size for the heading */
+    }
+
+    .icon-box p {
+      color: #fff; /* White paragraph text color */
+      font-size: 1rem; /* Adjusted font size for the paragraph */
+      line-height: 1.6; /* Increased line height for better readability */
+    }
+
+    .d-flex {
+      display: flex; /* Enables Flexbox */
+      flex-wrap: nowrap; /* Prevents wrapping to the next line */
+      justify-content: center; /* Centers the items horizontally */
+      gap: 1.5rem; /* Adds consistent spacing between items */
+    }
+    .divider {
+      width: 80px;
+      height: 4px;
+      background-color: #d4af37;
+      margin: 1rem auto 2rem;
+      border-radius: 2px;
+    }
+    .faq {
+      border-left: 4px solid #d4af37;
+      padding: 1.25rem 1rem;
+      margin-bottom: 1.5rem;
+      background-color: #fdfdfd;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+    .trust-badges {
+      position: relative;
+
+      z-index: 1; /* Ensure the Trusted Badge content is above the animation */
+      background-color: #f9f9f9db;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+      padding: 2rem;
+      margin: 3rem auto;
+      text-align: center;
+    }
+    .trust-badges img {
+      margin: 1rem;
+      max-height: 60px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+    .trust-badges img:hover {
+      filter: grayscale(0%);
+    }
+    h5 {
+      font-weight: 600;
+    }
+    .trust-badges h2,.Wat h2,.section-title{
+      font-weight: 200;
+      font-size: 30px;
+      color: #d4af37;
+    }
+    .trust-badges .d-flex {
+      position: relative;
+      z-index: 1; /* Ensure the content is above the canvas */
+    }
+    #canvasTwo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0; /* Place it behind the content */
+      pointer-events: none; /* Prevent interaction with the canvas */
+    }
+    .navBar {
+      border: 1px solid #d3d3d380; /* Light gray, near ash */
+      border-radius: 50px;
+      box-shadow: rgba(169, 169, 169, 0.73) 0px 0px 10px 0px;
+      padding: 1rem 3rem;
+      margin-top: 10px;
+    }
+    .nav-link {
+      color: #cacaca !important; /* Default color */
+      font-weight: 500;
+    }
+    .nav-link:hover {
+      color: #e0e0e0 !important; /* Light gray, near #f0f0f0 */
+    }
+    #navbarNav {
+      background-color: rgba(37, 36, 36, 0.73);
+      border-radius: 50px;
+      width: 300px;
+      
+    }
+    .signUp {
+      background-color:rgba(169, 169, 169, 0.73);
+      
+      padding: .5rem 1.5rem;
+      border-radius: 50px;
+      margin-right: 10px; 
+    }
+    .nav-item{
+      padding: 10px 10px; 
+    }
+    
+    .accordion {
+  --bs-accordion-btn-bg: #b89d2f;
+  --bs-accordion-active-bg: #b89d2f;
+  --bs-accordion-active-color: #000000;
+  --bs-accordion-bg: #fff;
+  --bs-accordion-color: #000;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+  
+.accordion-item {
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.accordion-button{
+  border-radius: 3px;
+}
+
+
+
+@media (max-width: 768px) {
+  .hero {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.75rem 1rem; /* 👈 smaller padding for mobile */
+    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero h1,
+  .hero p {
+    display: none;
+  }
+
+  .hero .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .sticky-top {
+  top: auto !important;
+  bottom: 0 !important;
+}
+}
+
+  /* Add styles for the canvas */
+  #heroCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+  }
+
+  .carousel-inner {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  .carousel-item {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .Wat {
+    padding-top: 2rem; /* Reduced padding-top for the section */
+    padding-bottom: 5rem; /* Keep bottom padding as is */
+  }
+
+ 
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg  animate__animated animate__fadeInDown sticky-top">
+    <div class="container-fluid navBar mx-4">
+      <a class="navbar-brand gold-text" href="#">AI Boost Agency</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex mx-auto ">
+          <li class="nav-item">
+            <a class="nav-link" href="#wat-je-zal-leren">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#vertrouwd-door-professionals">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#vertrouwd-door-professionals">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#vertrouwd-door-professionals">Careers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#vertrouwd-door-professionals">Contact US</a>
+          </li>
+        </ul>
+        
+      </div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link signIn" href="#veelgestelde-vragen">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link signUp" href="#download">
+            Sign Up <i class="fas fa-arrow-right"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    
+  </nav>
+  <header class="hero my-5 d-flex flex-column justify-content-center align-items-center text-center">
+    <canvas id="heroCanvas"></canvas>
+    <h1 class="section-title">Laat je bedrijf groeien met AI en ChatGPT</h1>
+    <p class="lead">Ontvang ons gratis e-book en ontdek hoe AI je onderneming kan transformeren</p>
+    <a href="#download" class="btn btn-gold btn-lg mt-4">Download gratis e-book</a>
+  </header>
+
+
+  <section class="container-fluid text-center py-5 Wat" data-aos="fade-up">
+    <h2 class="section-title gold-text" data-aos="fade-up">Wat je zal leren</h2>
+    <div class="divider" data-aos="zoom-in"></div>
+    <div class="d-flex flex-wrap justify-content-center">
+      <div class="icon-box" data-aos="fade-in">
+        <img src="https://cdn-icons-png.flaticon.com/512/427/427735.png" width="60" alt="AI icon">
+        <h5>AI in je bedrijf</h5>
+        <p>Ontdek hoe je AI kunt integreren in je dagelijkse bedrijfsvoering.</p>
+      </div>
+      <div class="icon-box" data-aos="fade-in" data-aos-delay="200">
+        <img src="https://cdn-icons-png.flaticon.com/512/4305/4305620.png" width="60" alt="Workflow icon">
+        <h5>Slimmere workflows</h5>
+        <p>Automatiseer repetitieve taken en win kostbare tijd.</p>
+      </div>
+      <div class="icon-box" data-aos="fade-in" data-aos-delay="400">
+        <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="60" alt="Growth icon">
+        <h5>Groei je omzet</h5>
+        <p>Gebruik AI om je verkoopproces te optimaliseren en meer leads te genereren.</p>
+      </div>
+    </div>
+  </section>
+  
+  <div id="animationContainer">
+    
+  
+
+  <section class="container trust-badges" data-aos="flip-left" id="vertrouwd-door-professionals">
+    <h2 class="section-title gold-text">Vertrouwd door professionals</h2>
+    <div class="divider"></div>
+    <div class="d-flex flex-wrap justify-content-center align-items-center">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" alt="Trust badge 1">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968756.png" alt="Trust badge 2">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968672.png" alt="Trust badge 3">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Trust badge 4">
+    </div>
+  </section>
+</div>
+  <section class="container py-5">
+    <h2 class="section-title gold-text text-center">Veelgestelde vragen</h2>
+    <div class="divider"></div>
+    <div class="accordion mt-4" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+            Is dit e-book echt gratis?
+          </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ja, volledig gratis. Je hoeft enkel je e-mailadres achter te laten.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+            Voor wie is dit e-book bedoeld?
+          </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Voor elke ondernemer of freelancer die efficiënter en slimmer wil werken met behulp van AI.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+            Wat als ik al met AI werk?
+          </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Ook dan haal je waardevolle inzichten en praktische toepassingen uit dit e-book.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lux-bg py-5">
+    <div class="container">
+      <h2 class="section-title text-center gold-text mb-4">Wat anderen zeggen</h2>
+      <div class="divider"></div>
+      <div class="testimonial animate__animated animate__fadeInUp">
+        <p>“Dankzij dit e-book heb ik mijn marketing volledig kunnen automatiseren. Het voelt alsof ik een extra werknemer heb.”</p>
+        <small>- Sophie, zaakvoerder marketingbureau</small>
+      </div>
+      <div class="testimonial animate__animated animate__fadeInUp animate__delay-1s">
+        <p>“De tips over ChatGPT bespaarden mij tientallen uren. En het beste? Het werkt écht!”</p>
+        <small>- Jan, freelancer</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5" id="download">
+    <h2 class="section-title gold-text text-center">Download gratis jouw exemplaar</h2>
+    <div class="divider"></div>
+    <form class="mt-4 mx-auto" action="#" method="POST" >
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Je naam" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Je e-mailadres" required>
+      </div>
+      <div class="submit d-flex justify-content-end">
+        
+      <button type="submit" class="btn btn-gold btn-lg w-10 ">Stuur mij het e-book</button>
+    </div>
+    </form>
+  </section>
+
+  <footer class="lux-bg text-center py-4">
+    <p class="mb-0">© 2025 AI Boost Agency. Alle rechten voorbehouden.</p>
+    <small>Privacybeleid | Contact</small>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Owl Carousel JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: true, // Whether animation should happen only once
+    });
+
+    const canvas = document.getElementById('heroCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Resize canvas to fit the hero section
+    function resizeCanvas() {
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Create particles
+    const particles = [];
+    const particleCount = 100;
+
+    function createParticles() {
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 20 + 5, // Size of the polygon
+          sides: Math.floor(Math.random() * 5) + 3, // Number of sides (3 to 7)
+          dx: (Math.random() - 0.5) * 2,
+          dy: (Math.random() - 0.5) * 2,
+        });
+      }
+    }
+
+    function drawPolygon(x, y, size, sides) {
+      const angle = (2 * Math.PI) / sides;
+      ctx.beginPath();
+      for (let i = 0; i < sides; i++) {
+        const px = x + size * Math.cos(i * angle);
+        const py = y + size * Math.sin(i * angle);
+        if (i === 0) {
+          ctx.moveTo(px, py);
+        } else {
+          ctx.lineTo(px, py);
+        }
+      }
+      ctx.closePath();
+    }
+
+    function drawLine(x1, y1, x2, y2) {
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.strokeStyle = '#ffd700'; // Gold color for the lines
+      ctx.lineWidth = 2; // Thickness of the lines
+      ctx.stroke();
+    }
+
+    function drawParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw particles and connect them with lines
+      particles.forEach((particle, index) => {
+        // Draw the particle itself
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2); // Small circle for the particle
+        ctx.fillStyle = '#ffd700'; // Gold color
+        ctx.fill();
+
+        // Connect the particle to nearby particles
+        for (let i = index + 1; i < particles.length; i++) {
+          const otherParticle = particles[i];
+          const distance = Math.sqrt(
+            Math.pow(particle.x - otherParticle.x, 2) +
+            Math.pow(particle.y - otherParticle.y, 2)
+          );
+
+          // Only draw a line if the particles are close enough
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = 'rgba(255, 215, 0, 0.5)'; // Semi-transparent gold
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      });
+    }
+
+    function updateParticles() {
+      particles.forEach((particle) => {
+        particle.x += particle.dx;
+        particle.y += particle.dy;
+
+        // Bounce particles off edges
+        if (particle.x < 0 || particle.x > canvas.width) particle.dx *= -1;
+        if (particle.y < 0 || particle.y > canvas.height) particle.dy *= -1;
+      });
+    }
+
+    function animate() {
+      drawParticles();
+      updateParticles();
+      requestAnimationFrame(animate);
+    }
+
+    createParticles();
+    animate();
+  </script>
+  <script>
+    const canvasTwo = document.getElementById('canvasTwo');
+    const ctxTwo = canvasTwo.getContext('2d');
+
+    // Resize canvas to fit the animation container
+    function resizeCanvasTwo() {
+      const animationContainer = document.getElementById('animationContainer');
+      canvasTwo.width = animationContainer.offsetWidth;
+      canvasTwo.height = animationContainer.offsetHeight;
+    }
+    window.addEventListener('resize', resizeCanvasTwo);
+    resizeCanvasTwo();
+
+    const particlesTwo = [];
+    const particleCountTwo = 20; // Reduced number of particles for less clutter
+
+    // Create particles
+    function createParticlesTwo() {
+      for (let i = 0; i < particleCountTwo; i++) {
+        particlesTwo.push({
+          x: Math.random() * canvasTwo.width, // Random starting x-coordinate
+          y: Math.random() * canvasTwo.height, // Random starting y-coordinate
+          targetX: Math.random() * canvasTwo.width, // Random target x-coordinate
+          targetY: Math.random() * canvasTwo.height, // Random target y-coordinate
+          progress: 0, // Progress of the line animation
+          speed: Math.random() * 0.01 + 0.005, // Slow animation speed
+          color: 'rgba(255, 215, 0, 0.7)' // Golden color with transparency
+        });
+      }
+    }
+
+    // Draw disjoint lines
+    function drawParticlesTwo() {
+      ctxTwo.clearRect(0, 0, canvasTwo.width, canvasTwo.height);
+
+      particlesTwo.forEach((particle) => {
+        // Calculate the current position of the particle
+        const currentX = particle.x + (particle.targetX - particle.x) * particle.progress;
+        const currentY = particle.y + (particle.targetY - particle.y) * particle.progress;
+
+        // Draw the disjoint line from the starting point to the current position
+        ctxTwo.beginPath();
+        ctxTwo.moveTo(particle.x, particle.y); // Start from the particle's initial position
+        ctxTwo.lineTo(currentX, currentY);
+        ctxTwo.strokeStyle = particle.color;
+        ctxTwo.lineWidth = 1.5;
+        ctxTwo.stroke();
+
+        // Update the progress of the particle
+        particle.progress += particle.speed;
+
+        // Reset the particle if it reaches its target
+        if (particle.progress >= 1) {
+          particle.progress = 0;
+          particle.x = Math.random() * canvasTwo.width; // Reset starting x-coordinate
+          particle.y = Math.random() * canvasTwo.height; // Reset starting y-coordinate
+          particle.targetX = Math.random() * canvasTwo.width; // Reset target x-coordinate
+          particle.targetY = Math.random() * canvasTwo.height; // Reset target y-coordinate
+        }
+      });
+    }
+
+    // Animate particles
+    function animateParticlesTwo() {
+      drawParticlesTwo();
+      requestAnimationFrame(animateParticlesTwo);
+    }
+
+    createParticlesTwo();
+    animateParticlesTwo();
+  </script>
+</body>
+</html>
