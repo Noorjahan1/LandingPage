@@ -1,8 +1,24 @@
 /* Sidebar basic styling */
 body{
-  background: #080835;
-  color: white;
+  background: #fff;
+  color: #080835;
 }
+.navbar-brand{
+  color: #080835;
+  font-family: "Playwrite RO", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+ .btn{
+  background: #080835;
+  color: #fff;
+  transition: all 0.3s ease;
+ }
+ .btn:hover{
+  background: #19194f;
+  color: #fff;
+ }
 .navbar{
   background: rgb(255, 217, 0)!important;
 }
