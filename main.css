@@ -1,0 +1,139 @@
+/* Sidebar basic styling */
+body{
+  background: #080835;
+  color: white;
+}
+.navbar{
+  background: rgb(255, 217, 0)!important;
+}
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1050; /* Sit on top (adjust if needed, higher than navbar if it should overlap) */
+    top: 0;
+    right: 0;
+    background-color: #343a40; /* Dark background */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content below the close button */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #adb5bd; /* Light grey text */
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* Change color on hover */
+  .sidebar a:hover {
+    color: #f8f9fa; /* White text on hover */
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px; /* Easier to click */
+    line-height: 1; /* Adjust vertical alignment */
+  }
+  
+  /* Style the main content (optional push effect) */
+  .main-content {
+    transition: margin-left .5s; /* If you want a push effect */
+    padding: 20px;
+    /* Add other styling as needed */
+  }
+  
+  /* Style for when the sidebar is open */
+  .sidebar-open {
+    width: 250px; /* Set the desired width */
+  }
+  
+  /* Style for pushing the main content when sidebar is open */
+  .main-content-pushed {
+     margin-left: 250px; /* Same width as the sidebar */
+  }
+  
+  /* Style the toggle button if needed */
+footer {
+    padding: 20px 150px;
+    background:linear-gradient(to right,#080835, #1c1c86); /* Dark blue */
+    color: white; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+.list-unstyled li a{
+  text-decoration: none;
+  color: white;
+  line-height: 2.5rem;
+}
+.hero{
+  position: relative;
+  background: #080835;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.navbar{
+  background:#08083549 ;/* Dark blue */
+}
+
+
+.side-nav.open {
+  right: 0; /* Position when open */
+}
+
+.side-nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: color 0.3s;
+}
+
+
+.side-nav a:hover {
+  color: #f1f1f1;
+}
+
+
+.side-nav .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 36px;
+  cursor: pointer;
+  background: none; /* Make button look like the link */
+  border: none;
+  color: white;
+  padding: 0;
+}
+
+.open-nav-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000; /* Ensure it's clickable */
+  /* Add other button styles as needed */
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Example CSS in your style.css file */
+.about-us-picture {
+  display: block; /* Or inline-block, depending on layout */
+  max-width: 100%; /* Make it responsive */
+  height: auto;   /* Maintain aspect ratio */
+  margin: 20px auto; /* Center it with some vertical space */
+  border-radius: 8px; /* Optional: rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
