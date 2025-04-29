@@ -11,12 +11,12 @@ body{
   font-style: normal;
 }
  .btn{
-  background: #080835;
+  background: #0808354a;
   color: #fff;
   transition: all 0.3s ease;
  }
  .btn:hover{
-  background: #19194f;
+  background: #19194fa1;
   color: #fff;
  }
 .navbar{
